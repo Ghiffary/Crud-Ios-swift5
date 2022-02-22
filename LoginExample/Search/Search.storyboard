@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="LoginExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pb7-7l-XN4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Search" id="6gb-sB-5ZU"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-Xd-Gao">
+                                <rect key="frame" x="0.0" y="266.5" width="414" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <color key="baseBackgroundColor" red="0.92377263310000002" green="0.3817741871" blue="0.20091703529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="BackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XWB-Ph-8aT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCg-Yy-imc">
+                                <rect key="frame" x="10" y="98" width="342" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="342" id="ag8-gb-EJ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa9-kU-D9O">
+                                <rect key="frame" x="353" y="99" width="50" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="magnifyingglass" catalog="system" title="."/>
+                                <connections>
+                                    <action selector="SearchButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fLc-Qf-5pQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfY-cq-Epa">
+                                <rect key="frame" x="10" y="170" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pb7-7l-XN4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1cD-cN-6m2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pb7-7l-XN4" secondAttribute="trailing" id="2Jd-cb-Wl2"/>
+                            <constraint firstItem="GCg-Yy-imc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="S2D-Dr-8qG"/>
+                            <constraint firstItem="xa9-kU-D9O" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="55" id="TUo-1Z-Vcw"/>
+                            <constraint firstItem="xa9-kU-D9O" firstAttribute="leading" secondItem="GCg-Yy-imc" secondAttribute="trailing" constant="1" id="Vwf-br-7Aa"/>
+                            <constraint firstItem="KfY-cq-Epa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="XQ2-Ck-vdd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6aF-Xd-Gao" secondAttribute="trailing" id="bt0-NY-us3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xa9-kU-D9O" secondAttribute="trailing" constant="11" id="fcB-25-vyQ"/>
+                            <constraint firstItem="KfY-cq-Epa" firstAttribute="top" secondItem="GCg-Yy-imc" secondAttribute="bottom" constant="38" id="qLs-Qv-Hr8"/>
+                            <constraint firstItem="6aF-Xd-Gao" firstAttribute="top" secondItem="KfY-cq-Epa" secondAttribute="bottom" constant="75.5" id="t2D-Ag-niB"/>
+                            <constraint firstItem="GCg-Yy-imc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="54" id="uhu-t1-I84"/>
+                            <constraint firstItem="Pb7-7l-XN4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vJK-HQ-fK6"/>
+                            <constraint firstItem="6aF-Xd-Gao" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zqh-Sy-v5b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtSearchBar" destination="GCg-Yy-imc" id="RPw-gi-zBo"/>
+                        <outlet property="txtSku" destination="KfY-cq-Epa" id="hIQ-43-9dX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
