@@ -31,7 +31,7 @@ class APIManager {
     
 
     
-    
+    // MARK: Get all data dashboard
     
     func getAllDataObat (){
         
@@ -72,7 +72,7 @@ class APIManager {
     }
     
     
-    // mark AddProduct API call
+    // MARK: AddProduct API call
     
     func callingAddProductAPI(AddProduct: AddProductModel, completionHandler: @escaping Handler
     ){
@@ -112,7 +112,7 @@ class APIManager {
     }
     
     
-    // mark Search API call
+    // MARK: Search API call
     
     func callingSearchAPI(id : String?, completionHandler: @escaping Handler
     ){
