@@ -18,10 +18,6 @@ class AddProductViewController: UIViewController, UITextFieldDelegate {
         
         guard let sku = txtSku.text else {return}
         guard let product = txtProduct.text else {return}
-//        guard let qty = txtQty.text else {return}
-//        guard let price = txtPrice.text else {return}
-//        guard let unit = txtUnit.text else {return}
-//        guard let status = txtStatus.text else {return}
         
         let ModelAddProduct = AddProductModel(title: sku, content:product)
         
